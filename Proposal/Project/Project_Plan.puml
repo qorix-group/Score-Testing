@@ -1,0 +1,58 @@
+@startgantt
+
+title CT generator
+
+Project starts 2025-02-19
+
+[Task: Continious rework, execution and coordination (TBD)] starts 2025-02-19
+[Task: Continious rework, execution and coordination (TBD)] ends 2025-06-30
+
+[Task 1: Design Phase (TBD)] starts 2025-02-19
+[Task 1: Design Phase (TBD)] ends 2025-02-26
+[Milestone 1: Initial Design Complete] happens 2025-02-26
+
+[Task 2: Development Phase (TBD)] starts 2025-02-26
+[Task 2: Development Phase (TBD)] ends 2025-03-12
+[Milestone 2: Development Complete] happens 2025-03-12
+
+[Task 2: Execute ISO conformity assessment review (TBD)] starts 2025-02-26
+[Task 2: Execute ISO conformity assessment review (TBD)] ends 2025-03-12
+[Milestone 2: Execute ISO conformity assessment review Complete] happens 2025-03-12
+
+[Task 3: Rework Design (TBD)] starts 2025-03-12
+[Task 3: Rework Design (TBD)] ends 2025-03-19
+[Milestone 3: Rework Design Complete] happens 2025-03-19
+
+[Task 4: Implement changes and bugfixing (TBD)] starts 2025-03-19
+[Task 4: Implement changes and bugfixing (TBD)] ends 2025-03-26
+[Milestone 4: Implement changes and bugfixing Complete] happens 2025-03-26
+
+[Task 5: Incorporate requirements and architecture (TBD)] starts 2025-03-26
+[Task 5: Incorporate requirements and architecture (TBD)] ends 2025-04-16
+[Milestone 5: Incorporate requirements and architecture Complete] happens 2025-04-16
+
+[Task 6: Incorporate requirements and architecture (TBD)] starts 2025-04-16
+[Task 6: Incorporate requirements and architecture (TBD)] ends 2025-04-23
+[Milestone 6: Incorporate requirements and architecture Complete] happens 2025-04-23
+
+[Task 7: Review and rework tool (TBD)] starts 2025-04-23
+[Task 7: Review and rework tool (TBD)] ends 2025-04-30
+[Milestone 7: Review and rework tool Complete] happens 2025-04-30
+
+[Task 8: Conduct formal assessment (TBD)] starts 2025-04-30
+[Task 8: Conduct formal assessment (TBD)] ends 2025-05-07
+[Milestone 8: Conduct formal assessment Complete] happens 2025-05-07
+
+[Task 9: Rework assessment findings (TBD)] starts 2025-05-07
+[Task 9: Rework assessment findings (TBD)] ends 2025-05-21
+[Milestone 9: Rework assessment findings Complete] happens 2025-05-21
+
+[Task 10: Review for completeness and create offical release pack (TBD)] starts 2025-05-21
+[Task 10: Review for completeness and create offical release pack (TBD)] ends 2025-06-11
+[Milestone 10: Release pack Complete] happens 2025-06-11
+
+[Task 11: Buffer time (TBD)] starts 2025-06-11
+[Task 11: Buffer time (TBD)] ends 2025-06-30
+[Milestone 11: End of project] happens 2025-06-30
+
+@endgantt
