@@ -1,0 +1,10 @@
+{
+    "libclang_path": "C:\\Program Files\\clang+llvm-20.1.0-x86_64-pc-windows-msvc\\bin\\libclang.dll",
+    "clang_bin_path": "C:\\Program Files\\clang+llvm-20.1.0-x86_64-pc-windows-msvc\\bin;",
+    "source_path": "D:\\Temp\\Qorix\\platform-main\\modules\\json_al\\components\\json_al\\djson_cpp\\src",
+	"output_dir": "D:\\Temp\\Qorix\\pythonProject",
+	"log_file": "D:\\Temp\\Qorix\\pythonProject\\LOG.txt",
+    "output_impl_file": "impl_needs.rst",
+    "output_test_file": "test_needs.rst",
+    "clang_args": ["-std=c++17", "--target=x86_64-pc-windows-msvc"]
+}
