@@ -1,4 +1,4 @@
-```rst
+
 .. _proxy_testing_tutorial:
 
 Proxy-Based Testing Tutorial
