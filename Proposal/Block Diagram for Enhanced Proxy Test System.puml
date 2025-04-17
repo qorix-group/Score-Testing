@@ -1,0 +1,48 @@
+```plantuml
+@startuml
+skinparam monochrome true
+
+' Define packages and components
+package "Production Code" {
+  [Class1] #..# [Class2]
+  [Class2] #..# [Class3]
+}
+
+package "Instrumented Code" {
+  [InstrumentedClass1] -|> [Class1]
+  [InstrumentedClass2NoSummarize] -|> [Class2]
+  [InstrumentedClass3NoExecuteNoSummarize] -|> [Class3]
+}
+
+package "Test Infrastructure" {
+  [TestProxy] --> [TestTracker]
+  [TestTracker] .> [DataFlowTest] : provides logging
+  [Class1Factory] --> [Class1]
+  [Class1Factory] --> [InstrumentedClass1]
+}
+
+package "Mocking" {
+  [MockClass2] -|> [Class2]
+  [MockClass3] -|> [Class3]
+}
+
+package "CI Integration" {
+  [GitHub Actions] --> [Test Infrastructure] : runs tests
+}
+
+' Relationships between components
+[InstrumentedClass1] --> [TestProxy] : embeds
+[InstrumentedClass2NoSummarize] --> [TestProxy] : embeds
+[InstrumentedClass3NoExecuteNoSummarize] --> [TestProxy] : embeds
+
+[DataFlowTest] --> [Class1Factory] : uses
+[DataFlowTest] --> [MockClass2] : uses
+[DataFlowTest] --> [MockClass3] : uses
+
+' Test execution flow
+[DataFlowTest] --> [InstrumentedClass1] : tests
+[DataFlowTest] --> [InstrumentedClass2NoSummarize] : tests
+[DataFlowTest] --> [InstrumentedClass3NoExecuteNoSummarize] : tests
+
+@enduml
+```
