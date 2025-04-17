@@ -1,0 +1,42 @@
+```plantuml
+@startuml
+skinparam monochrome true
+
+' Define high-level components
+entity "Production Code" as ProductionCode
+entity "Test Infrastructure" as TestInfra
+entity "Instrumented Code" as InstrumentedCode
+entity "Mocking" as Mocking
+entity "CI Pipeline" as CI
+
+' Define relationships
+ProductionCode --> TestInfra : tested by
+InstrumentedCode --> ProductionCode : extends
+InstrumentedCode --> TestInfra : tested by
+Mocking --> ProductionCode : mocks
+Mocking --> TestInfra : used by
+TestInfra --> CI : executed by
+
+' Add notes for clarity
+note right of ProductionCode
+  Original classes (Class1, Class2, Class3)
+end note
+
+note right of InstrumentedCode
+  Instrumented classes with proxy
+end note
+
+note right of TestInfra
+  TestProxy, TestTracker, DataFlowTest
+end note
+
+note right of Mocking
+  MockClass2, MockClass3
+end note
+
+note right of CI
+  GitHub Actions
+end note
+
+@enduml
+```
