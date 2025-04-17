@@ -315,4 +315,3 @@ This tutorial demonstrates how to use the enhanced C++ proxy-based testing syste
         # Push and check CI failure in Actions
 
    **Purpose**: Ensures consistent test execution across environments.
-```
