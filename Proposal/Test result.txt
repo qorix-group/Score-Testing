@@ -1,0 +1,115 @@
+$ ./test_exe.exe
+[==========] Running 10 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 10 tests from DataFlowTest
+[ RUN      ] DataFlowTest.ExecuteToTransform
+SetUp: Factory::use_instrumented = 1
+SetUp: global_tracker initialized at 0x2a571dd7db0
+Creating InstrumentedClass1
+Creating InstrumentedClass2
+Wrapping Class1::execute, inject_fault=0, fault_target=
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Creating InstrumentedClass3
+[       OK ] DataFlowTest.ExecuteToTransform (4 ms)
+[ RUN      ] DataFlowTest.TransformToProcess
+SetUp: Factory::use_instrumented = 1
+SetUp: global_tracker initialized at 0x2a571db6fe0
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Wrapping Class2::transform, inject_fault=0, fault_target=
+Creating InstrumentedClass3
+[       OK ] DataFlowTest.TransformToProcess (3 ms)
+[ RUN      ] DataFlowTest.ComputeToScale
+SetUp: Factory::use_instrumented = 1
+SetUp: global_tracker initialized at 0x2a571db6fe0
+Creating InstrumentedClass1
+Creating InstrumentedClass3
+Wrapping Class1::compute, inject_fault=0, fault_target=
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+[       OK ] DataFlowTest.ComputeToScale (5 ms)
+[ RUN      ] DataFlowTest.ComputeToGetName
+SetUp: Factory::use_instrumented = 1
+SetUp: global_tracker initialized at 0x2a571db6fe0
+Creating InstrumentedClass1
+Creating InstrumentedClass2
+Wrapping Class1::compute, inject_fault=0, fault_target=
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+[       OK ] DataFlowTest.ComputeToGetName (4 ms)
+[ RUN      ] DataFlowTest.CombineToDescribe
+SetUp: Factory::use_instrumented = 1
+SetUp: global_tracker initialized at 0x2a571db6fe0
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Wrapping Class2::combine, inject_fault=0, fault_target=
+Creating InstrumentedClass3
+[       OK ] DataFlowTest.CombineToDescribe (3 ms)
+[ RUN      ] DataFlowTest.AttributePropagation
+SetUp: Factory::use_instrumented = 1
+SetUp: global_tracker initialized at 0x2a571db6fe0
+Creating InstrumentedClass1
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Creating InstrumentedClass3
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Wrapping Class1::get_counter, inject_fault=0, fault_target=
+[       OK ] DataFlowTest.AttributePropagation (5 ms)
+[ RUN      ] DataFlowTest.FaultInjectionClass3
+SetUp: Factory::use_instrumented = 1
+SetUp: global_tracker initialized at 0x2a571db6fe0
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Wrapping Class2::transform, inject_fault=0, fault_target=
+Creating InstrumentedClass3
+Wrapping Class3::process, inject_fault=1, fault_target=Class3::process
+Triggering fault injection for Class3::process
+[       OK ] DataFlowTest.FaultInjectionClass3 (4 ms)
+[ RUN      ] DataFlowTest.FaultInjectionClass2
+SetUp: Factory::use_instrumented = 1
+SetUp: global_tracker initialized at 0x2a571db6fe0
+Creating InstrumentedClass1
+Creating InstrumentedClass2
+Wrapping Class1::execute, inject_fault=0, fault_target=
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Wrapping Class2::transform, inject_fault=1, fault_target=Class2::transform
+Triggering fault injection for Class2::transform
+[       OK ] DataFlowTest.FaultInjectionClass2 (6 ms)
+[ RUN      ] DataFlowTest.FaultInjectionScale
+SetUp: Factory::use_instrumented = 1
+SetUp: global_tracker initialized at 0x2a571db6fe0
+Creating InstrumentedClass1
+Creating InstrumentedClass3
+Wrapping Class1::compute, inject_fault=0, fault_target=
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Creating InstrumentedClass2
+Creating InstrumentedClass3
+Wrapping Class3::scale, inject_fault=1, fault_target=Class3::scale
+Triggering fault injection for Class3::scale
+[       OK ] DataFlowTest.FaultInjectionScale (5 ms)
+[ RUN      ] DataFlowTest.NonInstrumentedExecution
+SetUp: Factory::use_instrumented = 1
+SetUp: global_tracker initialized at 0x2a571db6fe0
+Creating Class1
+Creating Class2
+Creating Class3
+[       OK ] DataFlowTest.NonInstrumentedExecution (2 ms)
+[----------] 10 tests from DataFlowTest (161 ms total)
+
+[----------] Global test environment tear-down
+[==========] 10 tests from 1 test suite ran. (190 ms total)
+[  PASSED  ] 10 tests.
