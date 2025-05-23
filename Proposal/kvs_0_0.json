@@ -1,0 +1,25 @@
+{
+  "array": [
+    456,
+    false,
+    "Second"
+  ],
+  "MyKey": "Hello World",
+  "Key1": "Value1",
+  "object": {
+    "sub-null": null,
+    "sub-array": [
+      1246,
+      false,
+      "Fourth"
+    ],
+    "sub-string": "Third",
+    "sub-bool": true,
+    "sub-number": 789
+  },
+  "Key2": "Value2",
+  "number": 123,
+  "string": "First",
+  "bool": true,
+  "null": null
+}
